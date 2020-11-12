@@ -21,3 +21,9 @@ me = JSON.parse(me)
 //showing the variable me back to object | montrant la variable me retour à l'objet
 console.log("\n Showing the variable back to object\nmontrant la variable retour à l'objet")
 console.log(me)
+
+//November 11
+/*
+JSON.stringify
+JSON.parse
+*/
