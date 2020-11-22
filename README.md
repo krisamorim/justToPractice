@@ -19,3 +19,14 @@
     isnumeric
     isalpha
     isalnum
+* Operators
+    + sum
+    - subtraction
+    * multiply
+    / division
+    % rest
+    // entire division
+    * 1/2 square root
+    * 1/3 cubic root
+    ** power
+   Precedence order
