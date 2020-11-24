@@ -1,4 +1,5 @@
 //source like string
+/*
 let list = '["www.globo.com","www.youtube.com","www.facebook.com","www.yahoo.com","br-playground.digitalhouse.com"]'
 
 //### USING callback ###
@@ -37,7 +38,7 @@ list = JSON.stringify(list)
 console.log(`\nNow list is a string:\n${list}\nThe type of list is: ${typeof(list)}`)
 
 
-/*
+
 //#### Without using callback - How to get the same solution in less lines ####
 let anotherJoin = (arr) => {
   let endList = []
@@ -49,3 +50,7 @@ let anotherJoin = (arr) => {
 
 console.log(JSON.stringify(anotherJoin(JSON.parse(list))))
 */
+
+//-------------------- New callback
+let hello = () => console.log("Hello");
+setTimeout(hello,5000)
