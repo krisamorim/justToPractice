@@ -38,13 +38,16 @@
 * Database Management System
     Download SQL Server Management Studio (SSMS) with the same system operation language
 * Instructions
-    - Consultation
     - DML (Data Manipulation Language)
-    - DDL (Data definition Language)
-         - create database
+        Insert, Delete, Update
+    - DDL (Data Definition Language)
         create database [DBName]
-    - delete database
         drop database [DBName]
-    - TC (Transaction Control)
+    - DTC (Data Transaction Control)
+        Begin transaction, commit and rollback
+    - DCL (Data Control Language)
+        Grant, Revoke and Deny
+    - DQL (Data Query Language)
+        select
 
    
