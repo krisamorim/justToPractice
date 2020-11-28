@@ -11,6 +11,10 @@
 
 -> Python
 * print
+    \n -> add break line
+    end= -> to remove break line
+    mutiply string
+    concatenate with + and {}
 * input
 * check type
     isspace
@@ -43,7 +47,7 @@
     - DDL (Data Definition Language)
         create, alter, drop, rename and truncate
     - DTC (Data Transaction Control)
-        Begin transaction, commit and rollback
+        Commit, savepoint and rollback
     - DCL (Data Control Language)
         Grant, Revoke and Deny
     - DQL (Data Query Language)
