@@ -41,8 +41,7 @@
     - DML (Data Manipulation Language)
         Insert, Delete, Update
     - DDL (Data Definition Language)
-        create database [DBName]
-        drop database [DBName]
+        create, alter, drop, rename and truncate
     - DTC (Data Transaction Control)
         Begin transaction, commit and rollback
     - DCL (Data Control Language)
