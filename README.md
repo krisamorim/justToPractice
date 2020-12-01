@@ -35,7 +35,9 @@
     * 1/3 cubic root
     ** power
    Precedence order
-
+* Functions
+    math
+    
 -> SQL
 * Instalation
     The installation should have the same system language
