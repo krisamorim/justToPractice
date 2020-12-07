@@ -34,10 +34,11 @@ app.get("/clients", function(req, res){
 app.get("/clients/:id", function(req, res){
   const { id } = req.params; //pegando o id do cliente do uri
   const client = data.find(cli => cli.id = id);//buscando o cliente com o id pego da URI e associando à variável client o id com o mesmo id pego dos parâmetros da URI
-  
+  // console.log(id)
   //se não existir o clinet
   if (!client) return res.status(204).json();
   res.json(client);//respondendo o client encontrado
+  
 });//pegar um cliente
 
 app.post("/clients", function(req, res){
