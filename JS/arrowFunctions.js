@@ -1,6 +1,6 @@
 //phrase
 let phase = "Have a good night";
-/*
+
 //####### replace word ####### 
 // ->> nornal function sintax 
 function substituir (text, wordSearched, wordToReplace){

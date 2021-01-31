@@ -1,5 +1,5 @@
 //source like string
-/*
+
 let list = '["www.globo.com","www.youtube.com","www.facebook.com","www.yahoo.com","br-playground.digitalhouse.com"]'
 
 //### USING callback ###
@@ -43,13 +43,14 @@ console.log(`\nNow list is a string:\n${list}\nThe type of list is: ${typeof(lis
 let anotherJoin = (arr) => {
   let endList = []
   for (i=0; i<arr.length; i++){
-    endList.push('http://'+arr[i])  
+    endList.push('http://'+
+    arr[i])  
   }
   return endList
 }
 
 console.log(JSON.stringify(anotherJoin(JSON.parse(list))))
-*/
+
 
 //-------------------- New callback
 let hello = () => console.log("Hello");
