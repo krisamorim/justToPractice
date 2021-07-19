@@ -1,0 +1,11 @@
+npm init -y -> To start new Node project. File package.json will create
+npm install packageName --save -> Install a new package in the project. When a new package is add the file package.json to list packages add
+
+
+
+#packages
+*packages should be imported using require('package Name') in the entry Point (usually app.js)
+
+moment  -> to work with date
+fs      -> to work with files in the system
+        variable.readFileSync(__dirname + '/nameFile.txt', 'utf8')
