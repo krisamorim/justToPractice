@@ -1,0 +1,2 @@
+1- docker pull newdeveloper/apache-php
+2-  docker run -itd -p 80:80 -v /var/www/html:/var/www/html httpd

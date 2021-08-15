@@ -1,0 +1,38 @@
+# docker version
+to check version
+
+# docker pull mysql
+download mysql imge from docker register (repository)
+
+# docker pull mysql:5.7
+to download a specific version should type the version after the colon
+
+# docker images
+to see images you have, it means, you download already
+
+# docker run mysql:5.7
+to run image
+
+#docker run -e MYSQL_ROOT_PASSWORD=passhere --name DockerImag -d -p 3377:3306 ImageName
+-e: means environment, use when you need some environment argument
+--name: creat a specific name docker (isn't mandatory)
+-d: not to hold the terminal
+-p: redirect requests from host port 3377 to docker port 3306
+
+#docker ps
+show running images
+
+#docker ps -a
+-a: to show all container (running or stoped)
+
+#docker stop containerID
+to stop container
+
+#docker inspec DockerName | grep IPA
+inspect: show docker info
+| grep IPA: shows only lines that have IPA
+
+#docker exec -it dockerName "bash" or /bin/bash
+to get in the docker
+
+

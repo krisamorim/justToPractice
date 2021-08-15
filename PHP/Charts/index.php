@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chart by Kris</title>
 </head>
-    
+    <!-- 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-
-    <!-- <script type="text/javascript" src=./JS/loader.js></script> -->
+    -->
+   <script type="text/javascript" src="./JS/loader.js"></script> 
 
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -17,11 +17,11 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
+          ['Year', 'Sales', 'Expenses', 'AAA'],
+          ['2004',  1000,      400, 100],
+          ['2005',  1170,      460,  442],
+          ['2006',  660,       1120,   583],
+          ['2007',  1030,      540,   400]
         ]);
 
         var options = {
@@ -40,5 +40,6 @@
 
 <body>
   <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  
 </body>
 </html>
