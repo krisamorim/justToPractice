@@ -1,0 +1,11 @@
+#download
+docker pull mcr.microsoft.com/mssql/server
+
+#run docker
+docker run -e "ACCEPT_EULA=Y" -e "root_PASSWORD=PassW0rd#xx1" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+
+#conect docker
+docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <your_password>
+
+
+source: https://hub.docker.com/_/microsoft-mssql-server
