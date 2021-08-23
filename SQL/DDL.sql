@@ -27,6 +27,9 @@ DROP DATABASE [DataBaseName]
 --RENAME
 RENAME TABLE [TableName] to [NewTableName]
 
+--rename DataBase
+ALTER DATABASE kris MODIFY NAME = EmpresaXPTO;
+
 --TRUNCATE
 --To remove table's data
 TRUNCATE TABLE [TableName]
