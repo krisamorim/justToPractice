@@ -1,2 +1,2 @@
-1- docker pull newdeveloper/apache-php
-2-  docker run -itd -p 80:80 -v /var/www/html:/var/www/html httpd
+1- docker pull newdeveloper/apache-php:latest
+2- docker run -itd -p 8080:80 -v /var/www/html:/var/www/html newdeveloper/apache-php:latest
