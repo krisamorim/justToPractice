@@ -60,8 +60,33 @@ namespace identificarIdade
                     prod3
                 };
 
-                Console.WriteLine("A lista é: " + produtos);
-                Console.ReadLine();
+                Console.WriteLine("A lista é:");
+                Console.WriteLine(produtos[0]);
+                Console.WriteLine(produtos[1]);
+                Console.WriteLine(produtos[2]);
+
+                Console.WriteLine("Agora vamos atualizar um item da lista");
+                Console.WriteLine("Qual item deseja atualizar? 1, 2 ou 3?");
+                var item = int.Parse(Console.ReadLine());
+                item = item - 1;
+                Console.WriteLine("Deseja alterar o item "+produtos[item]+"? 1- p/ SIM e 2- p/ Não");
+                var resp = int.Parse(Console.ReadLine());
+
+                if (resp == 1)
+                {
+                    Console.WriteLine("Qual o novo item?");
+                    produtos[item] = Console.ReadLine();
+                    Console.WriteLine("A nova lista ficou assim:");
+                    Console.WriteLine(produtos[0]);
+                    Console.WriteLine(produtos[1]);
+                    Console.WriteLine(produtos[2]);
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("OK bye bye");
+                    Console.ReadLine();
+                }
             }
         }
     }
