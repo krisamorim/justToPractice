@@ -1,4 +1,4 @@
-//Version 2
+//Version 3.1
 //get data -> two options to choose
 
 using System;
@@ -53,12 +53,7 @@ namespace identificarIdade
                 Console.WriteLine("Digite o terceiro produto:");
                 var prod3 = Console.ReadLine();
 
-                string[] produtos = new string[3]
-                {
-                    prod1,
-                    prod2,
-                    prod3
-                };
+                string[] produtos = {prod1, prod2, prod3};
 
                 Console.WriteLine("A lista é:");
                 Console.WriteLine(produtos[0]);
