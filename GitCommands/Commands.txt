@@ -1,0 +1,5 @@
+1- Add al in the stage area
+git add .
+
+2- Remove all from stage area 
+git reset HEAD -- .
