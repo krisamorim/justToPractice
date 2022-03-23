@@ -3,3 +3,13 @@ git add .
 
 2- Remove all from stage area 
 git reset HEAD -- .
+
+3- Retorna o código para a versão do repositório
+revert
+
+4- Ignoar arquivos para não enviar para o repositorio
+git ignore
+
+
+5- Baixar somente atualizaçõ do projeto
+pull
