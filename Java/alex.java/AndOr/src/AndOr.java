@@ -15,10 +15,8 @@ public class AndOr {
 					System.out.println("Valor insuficiente");
 				}else{
 					System.out.println("Você não tem idade suficiente");
+				}
 			}
-		}
-
+		}	
 	}
-
-}
 }
