@@ -7,7 +7,7 @@ public class GlobalPrivado {
 	/*Main é um metodo autoexecutavel em java*/
 	public static void main(String[] args) {
 		
-		/*Variavel local pois pertence somente a esse código*/
+		/*Variavel local pois pertence somente a esse método e o valor fica dentro do metodo*/
 		int maiorIdade = 18;
 		System.out.println("Valor da variavél local = " + maiorIdade );
 		
