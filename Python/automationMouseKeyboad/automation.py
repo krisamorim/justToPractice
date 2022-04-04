@@ -5,10 +5,9 @@ import time
 import os
 os.chdir(r'C:\Users\Kris.Furtado\OneDrive - Deliver IT\Documentos\Code\justToPractice\Python\automationMouseKeyboad')
 
-
 time.sleep(10)
 
-for i in range(31):
+for i in range(2):
     #CTRL+C
     pyautogui.keyDown('ctrl')
     pyautogui.press(['c'])
@@ -20,10 +19,7 @@ for i in range(31):
     pyautogui.keyUp('alt')
 
     #descer
-    pyautogui.press(['down'])
-    pyautogui.press(['down'])
-    pyautogui.press(['down'])
-    pyautogui.press(['down'])
+    pyautogui.press(['down', 'down', 'down', 'down'])
 
     #Clicar em add
     buttonAdd = pyautogui.locateOnScreen('AddButton.png')
@@ -43,13 +39,7 @@ for i in range(31):
     pyautogui.keyUp('alt')
 
     #vai para celula da hora inicial
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
+    pyautogui.press(['left', 'left', 'left', 'left', 'left', 'left', 'left'])
 
     #CTRL+C
     pyautogui.keyDown('ctrl')
@@ -96,11 +86,7 @@ for i in range(31):
     pyautogui.keyUp('ctrl')
 
     #vai apra o confirmar
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
+    pyautogui.press(['tab', 'tab', 'tab', 'tab', 'tab'])
     pyautogui.press(['enter'])
 
     time.sleep(2)
@@ -118,12 +104,7 @@ for i in range(31):
     pyautogui.keyUp('alt')
 
     #Vai p/ data
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
+    pyautogui.press(['tab', 'tab', 'tab', 'tab', 'tab', 'tab'])
 
     #CTRL+C p/ data
     pyautogui.keyDown('ctrl')
@@ -146,11 +127,7 @@ for i in range(31):
     pyautogui.keyUp('alt')
 
     #vai para celula da hora de retorno do almoço
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
-    pyautogui.press(['left'])
+    pyautogui.press(['left', 'left', 'left', 'left', 'left'])
 
     #CTRL+C
     pyautogui.keyDown('ctrl')
@@ -197,11 +174,7 @@ for i in range(31):
     pyautogui.keyUp('ctrl')
 
     #vai apra o confirmar
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
-    pyautogui.press(['tab'])
+    pyautogui.press(['tab', 'tab', 'tab', 'tab', 'tab'])
     pyautogui.press(['enter'])
 
     #volta p/ excel
@@ -210,9 +183,6 @@ for i in range(31):
     pyautogui.keyUp('alt')
 
     #prox data
-    pyautogui.press(['right'])
-    pyautogui.press(['right'])
-    pyautogui.press(['right'])
-    pyautogui.press(['right'])
+    pyautogui.press(['right', 'right', 'right', 'right'])
     pyautogui.press(['down'])
 
