@@ -1,0 +1,34 @@
+#start withou check virtualization support
+minikube start --wait=false --no-vtx-check
+
+#Details of the cluster and its health status
+kubectl cluster-info
+
+#To view the nodes in the cluster
+kubectl get nodes
+
+#To view namespace
+kubectl get namespaces
+
+#To view the podes from kube-system namespace
+kubectl get pods -n kube-system
+
+#To view info of the etcd-docker-desktop pod at the kube-sysyem namespace
+kubectl describe pod etcd-docker-desktop -n kube-system
+
+#List all pods from all namespaces
+kubectl get pods --all-namespaces
+
+#To create a new namespace
+kubectl create namespace teste
+
+#Create a pod in the teste namespace
+kubectl run nginx --image=nginx -n teste -w
+*-w the -w flag means watch mode
+
+#To view pods of the teste namespace
+kubectl get pods -n teste -o wide
+*-o wide show more details
+
+#Delet POD 
+kubctl delete pod nginx
