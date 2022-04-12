@@ -3,12 +3,35 @@ from time import time
 import pyautogui
 import time
 import os
-os.chdir(r'C:\Users\Kris.Furtado\OneDrive - Deliver IT\Documentos\Code\justToPractice\Python\automationMouseKeyboad')
-
+os.chdir(r'C:\Users\Kris.Furtado\OneDrive - Deliver IT\Documentos\Code\justToPractice\Coder\Python\automationMouseKeyboad')
 
 time.sleep(2)
-#buttonProx = pyautogui.locateOnScreen('proxPage.png')
-#pyautogui.click(buttonProx)
 
+print("Segunda")
+print("card: ",pyautogui.position())
+time.sleep(5)
+print("DroDown: ",pyautogui.position())
+time.sleep(5)
 
-print(pyautogui.position())
+print("\nTerça")
+print("card: ",pyautogui.position())
+time.sleep(5)
+print("DroDown: ",pyautogui.position())
+time.sleep(5)
+
+print("\Quarta")
+print("card: ",pyautogui.position())
+time.sleep(5)
+print("DroDown: ",pyautogui.position())
+time.sleep(5)
+
+print("\Quinta")
+print("card: ",pyautogui.position())
+time.sleep(5)
+print("DroDown: ",pyautogui.position())
+time.sleep(5)
+
+print("\Sexta")
+print("card: ",pyautogui.position())
+time.sleep(5)
+print("DroDown: ",pyautogui.position())
