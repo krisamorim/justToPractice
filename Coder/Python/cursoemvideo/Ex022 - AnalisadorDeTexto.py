@@ -1,0 +1,5 @@
+name = input("What's your full name?\n")
+quant = len(name)
+quantEspaco = name.count(" ")
+list = name.split()
+print('Upper: {}\nLower: {}\nSeu nome tem {} caracteres contando com espaços\nSem espaços tem somente {}\nO seu primeiro nome é {} e ele tem {} letras'.format(name.upper(), name.lower(), quant, quant-quantEspaco,list[0], len(list[0])))
