@@ -3,4 +3,4 @@ resto = numero % 2
 if resto != 0:
  print('Impar')
 else:
- print('Par')
+ print('Para')
