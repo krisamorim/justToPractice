@@ -1,0 +1,15 @@
+###CONFIG ###
+#Configurar CLi AWS
+aws configure
+
+#to view bucket s3
+aws s3 ls
+
+### EC2 INTANCES ###
+#To view EC2 instances
+aws ec2 describe-instances
+
+
+### RDS ###
+#TO list all instances RDS
+aws rds describe-db-instances
