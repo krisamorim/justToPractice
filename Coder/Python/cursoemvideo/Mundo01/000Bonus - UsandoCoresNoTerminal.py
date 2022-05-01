@@ -7,8 +7,6 @@ print('\033[;42mBranco no Verde\033[m')
 print('\033[mCinza no preto\033[m')
 print('\033[7;30mPreto no cinza\033[m')
 
-
-
 #0 none
 #1 bold
 #4 underline
