@@ -100,6 +100,7 @@ for i in range(2):
 
     time.sleep(2)
 
+
     #descer
     pyautogui.press(['down', 'down', 'down', 'down'])
 
