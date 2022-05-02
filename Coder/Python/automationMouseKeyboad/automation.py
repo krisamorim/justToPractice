@@ -5,6 +5,13 @@ import time
 import os
 os.chdir(r'C:\Users\Kris.Furtado\OneDrive - Deliver IT\Documentos\Code\justToPractice\Python\automationMouseKeyboad')
 
+'''
+<-- ATENÇÃO -->
+1-Dependendo do OS or arquivo deve ser alterado de CRLF (Windows) para LF (Unic/MAC)
+2-Tambén verificar os caminha na linha 6 pois varia dependendo do OS
+3-Definir o lop na linha 17
+'''
+
 time.sleep(10)
 
 for i in range(2):
@@ -92,6 +99,9 @@ for i in range(2):
     pyautogui.press(['enter'])
 
     time.sleep(2)
+
+    #descer
+    pyautogui.press(['down', 'down', 'down', 'down'])
 
     #Clicar em add
     buttonAdd = pyautogui.locateOnScreen('AddButton.png')
