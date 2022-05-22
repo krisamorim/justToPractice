@@ -1,0 +1,2 @@
+#executar uma imagem 
+docker run -d (executa em segundo plano, para liberar o terminal) --rm(para remover a imgem ao finaliza-la) --name (o nome que eu quero para esse docker) -p 8080:80(porta externa 8080 sendo roteada para porta 80 interna do docker) -v /home/usuariox:/var/www (linkar a pasta /home/usuário do hosto à pasta /var/www internad o docker)
