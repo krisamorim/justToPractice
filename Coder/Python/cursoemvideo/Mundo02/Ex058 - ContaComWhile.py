@@ -7,7 +7,7 @@ while numEscolhido != numSorteado:
     tentativas += 1
 
 if tentativas < 2:
-    print('\033[:42mParabéns!!!\033[m Você acertou de primeira.\nO número sorteado foi {}'.format(numSorteado))
+    print('\033[32:42mParabéns!!!\033[m Você acertou de primeira.\nO número sorteado foi {}'.format(numSorteado))
 elif tentativas < 3:
     print('\033[32:41mParabéns!!!\033[m Você acertou com menos de 3 tentativas\nO número sorteado foi {}'.format(numSorteado))
 else:
