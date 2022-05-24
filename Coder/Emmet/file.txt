@@ -1,0 +1,38 @@
+https://docs.emmet.io/abbreviations/syntax/
+
+Comando:
+    meta#id.classe1.classe2[name content]*3
+Resultado:
+    <meta id="id" class="classe1 classe2" name="" content="">
+    <meta id="id" class="classe1 classe2" name="" content="">
+    <meta id="id" class="classe1 classe2" name="" content="">
+-----------------------------------------------------------------------------------------
+
+Comando:
+    (div>dl>(dt+dd)*3)+footer>p
+Resiltado:
+    <div>
+        <dl>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </div>
+    <footer>
+        <p></p>
+    </footer>
+-----------------------------------------------------------------------------------------
+
+    Comando:
+        ul>li.item$@-*5
+    Resultado:
+        <ul>
+            <li class="item5"></li>
+            <li class="item4"></li>
+            <li class="item3"></li>
+            <li class="item2"></li>
+            <li class="item1"></li>
+        </ul>
