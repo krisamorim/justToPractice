@@ -11,5 +11,6 @@ revert
 git ignore
 
 
-5- Baixar somente atualizaçõ do projeto
+5- Baixar somente atualizações do projeto
 pull
+obs: se o git pull não funcionar execute o comando git clean -n e rode novamente o pull se não funcionar execute o git clean -d -f e tente novamente 
