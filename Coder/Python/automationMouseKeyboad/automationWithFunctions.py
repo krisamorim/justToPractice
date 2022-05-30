@@ -8,8 +8,9 @@ import time
 <-- ATENÇÃO -->
 1-Dependendo do OS or arquivo deve ser alterado de CRLF (Windows) para LF (Unic/MAC)
 2-Definir o lop na linha 124  (Ler comentario da linha)                    
-3- O excel não pode ter espaço vasion entre as linhas e as datas devem vicar 3 coluna após a hora de saida (confira na linha 39 quantos lefts são feitos da data para o horario inicial)
-4- antes de inicicar deixe a data inicial selecionada no excel e a pagina deo alt+tab pronta no background, para que o alt+tab entre excel e navegador funcione
+3-O excel não pode ter espaço vasion entre as linhas e as datas devem vicar 3 coluna após a hora de saida (confira na linha 39 quantos lefts são feitos da data para o horario inicial)
+4-antes de inicicar deixe a data inicial selecionada no excel e a pagina deo alt+tab pronta no background, para que o alt+tab entre excel e navegador funcione
+5-Seria bom rodar pit install Pillow autogui 
 '''
 ############### CRIANDO FUNÇÕES ####################################
 
