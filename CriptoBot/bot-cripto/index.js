@@ -15,7 +15,24 @@ async function process(){
     const candle = response.data[499];
     
     //console.log(response.data);
-    console.log(candle);
+    //mostra somente o dado da posição 4 (preço de fechamento do candle)
+    console.log(candle[4]);
+    /*
+    [
+        1654658520000, -> tempo de abertura
+        '30570.28000000', -> valor de abertura
+        '30599.97000000', -> max da vela
+        '30534.89000000', -> min da vela
+        '30544.83000000', -> valor de fechamento (POSIÇÃO 4)
+        '73.57669000',
+        1654658579999,
+        '2248747.85075450',
+        1013,
+        '27.93858000',
+        '853899.53838020',
+        '0'
+      ]
+    */
 }
 
 process();
