@@ -34,5 +34,6 @@ async function process(){
       ]
     */
 }
-
-process();
+//chamar a função process (pegar o valor da ultima posição do candle) a cada 2 segundos
+setInterval(process, 2000);
+//process();
