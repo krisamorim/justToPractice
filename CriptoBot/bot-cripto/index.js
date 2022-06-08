@@ -11,7 +11,11 @@ async function process(){
     //como é uma chamada que pode demorar ela é assincrona e por isso deve ter o await p/ que a execução só continue após receber os dados, ou seja, o sistema fica esperando. TB DEVE SER ADD async na frente para declaração da função
     const response = await axios.get("https://api.binance.com/api/v3/klines?symbol=BTCBUSD&interval=1m");//o get é p/ pegar dados dos ultimso 500 candles (mini, max, time) no BTCBUSD no intervalo de 1m
 
-    console.log(response.data);
+    // após testar e receber as ultimas 500 posições, agora irei criar uma variavel para pegar somente a posição 499 que é esatamente a ultima posição, para simular uma captura em tempo real da ultima posição
+    const candle = response.data[499];
+    
+    //console.log(response.data);
+    console.log(candle);
 }
 
 process();
