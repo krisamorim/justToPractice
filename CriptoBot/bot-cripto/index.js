@@ -16,7 +16,17 @@ async function process(){
     
     //console.log(response.data);
     //mostra somente o dado da posição 4 (preço de fechamento do candle)
-    console.log(candle[4]);
+    //console.log(candle[4]);
+
+    //armazenar o valor de fechamento do candle em uma variável convertendo para float pois vem como texto da api da binance p/ poder utilizar em um if
+    const price = parseFloat(candle[4]);
+
+    if(price >= 36291)
+        console.log('Vender!');
+    else if(price <= 35764)
+        console.log('Comprar!');
+    else
+    console.log('Aguardar')
     /*
     [
         1654658520000, -> tempo de abertura
