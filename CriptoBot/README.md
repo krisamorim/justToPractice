@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 # imersao-bot-cripto aula 01
 Fontes do evento Imersão Bot Cripto 3.0
+=======
+# imersao-bot-cripto
+Evento para criar um bot trader
+>>>>>>> c97c9fdf20ad457443b2e2afcdf7c6abf923b788
 
-Inscreva-se em https://www.luiztools.com.br/bot-cripto
 
 ## Para executar
 
@@ -10,5 +14,3 @@ Inscreva-se em https://www.luiztools.com.br/bot-cripto
 3. Navegue até a pasta do projeto pelo terminal
 4. Instale as dependências com "npm install" na pasta do projeto
 5. Execute o projeto com o comando "node index.js" na pasta do projeto
-
-Dúvidas? Envie para contato@luiztools.com.br ou siga @luiztools_ no Instagram.
