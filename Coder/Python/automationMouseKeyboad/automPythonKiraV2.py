@@ -2,6 +2,9 @@
 
 import pyautogui
 from time import sleep
+import os
+os.chdir(r'C:\Users\Kris.Furtado\OneDrive - Deliver IT\Área de Trabalho\Docs\Documentos\Code\justToPractice\Coder\Python\automationMouseKeyboad')
+
 #--------------capturar posição das imagens dos dias da semana-------------
 posicaoSegunda = pyautogui.locateOnScreen('./seg.png')
 posicaoTerca = pyautogui.locateOnScreen('./ter.png')

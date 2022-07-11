@@ -1,4 +1,4 @@
-# imersao-bot-cripto
+# imersao-bot-cripto aula 01
 Fontes do evento Imersão Bot Cripto 3.0
 
 Inscreva-se em https://www.luiztools.com.br/bot-cripto

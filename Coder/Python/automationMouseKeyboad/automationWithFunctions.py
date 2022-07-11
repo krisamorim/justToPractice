@@ -122,7 +122,7 @@ def prox_linha():
 #aguardar
 time.sleep(10)
 #Se tiver 30 linhas no excel coloque 29, se tive 20 coloque 19 e assim por diante, sempre uma  menos
-qntids_desejadas = 20
+qntids_desejadas = 19
 for c in range(1,qntids_desejadas):
     primeiro_turno()
     segundo_turno()
