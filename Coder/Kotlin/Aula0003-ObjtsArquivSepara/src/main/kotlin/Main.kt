@@ -1,5 +1,5 @@
 fun main() {
-
+    //criadno objeto A e instanciando o mesmo
     val userA = User()
 
     userA.varName = "kris"
