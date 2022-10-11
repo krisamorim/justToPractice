@@ -1,0 +1,7 @@
+1- inicar o projeto (criar o json)
+-> npm init
+
+2- Instalar express (framework mais conhecido no meio node), body-parser (responsavel por realizar a serialização das informações que serão disponibilizadas), CORS (Segurança, para informar a natureza da requisição que eu espero, ou seja, liberar somente para algumas origem), nodemon (ajuda no deve para dar o refresh), morgan (faz registro das requisições).
+-> npm i express body-parser cors nodemon morgan
+
+3- criar o arquivo index.js na raiz do projeto (mesmo local onde está o package.json)
