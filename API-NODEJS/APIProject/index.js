@@ -4,6 +4,9 @@ const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
+//8- Importando arquivo de rota
+const routes = require('./Configs/routes')
+
 //2- Instanciar express
 const app = express()
 
@@ -12,6 +15,10 @@ app.use(morgan('dev'))//morgan ao projeto para que tenhamos o log de execução
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(express.json()) //serve para informar o tipo de dados que queremos receber, que no nosso caso será um JSON
 app.use(cors())// para definir quem pode comunicar coma  api
+
+//9- Configurar par ao app utilizar arquivo de rota
+app.use(routes)
+
 
 //5- simulando DB
 let db = [
