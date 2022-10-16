@@ -6,7 +6,8 @@ app.use(morgan('dev'))
 
 
 //função para encontrar o angulo
-function findAngule(desiredTime){
+function findAngule(h,m){
+    let desiredTime = h + ":" + m
     let querieFound = queries.find((querie) => {
         return querie.time === desiredTime;
     })
@@ -16,8 +17,15 @@ function findAngule(desiredTime){
         return querieFound['angle']
     }else{ //se não foi pesquisada pegue no db e coloque no json
         //comadno para conectar
-        //comando para achar
-        //associar o valor achar a variavel angulo
+        //comando para achar no DB
+        //select angle from tabledefault t where "hour" = h and "minute" = m;
+            //se não achar na DB
+                //então calcular
+                //add a base de dados
+                //add ao arquivo queri
+            //se achar ele faz o select e pega o angulo 
+                //add ao arquivo querri
+        //associar o valor achar a variavel angulo p/ mostra no navegador
         return "buscar no DB"
         //add a nova consulta ao arquivo json
     }
@@ -32,17 +40,15 @@ app.get('/', (req, res) => {
 app.get('/vinl/rest/clock/:hour', (req, res) => {
     let hour = req.params.hour
     let minutes = "0"
-    let tempo = hour+":"+minutes
 
-    return res.json(findAngule(tempo))
+    return res.json(findAngule(hour, minutes))
 })
 
 //rota caso informe hora E minuto
 app.get('/vinl/rest/clock/:hour/:minutes', (req, res) => {
     let hour = req.params.hour
     let minutes = req.params.minutes
-    let tempo = hour+":"+minutes
-    return res.json(findAngule(tempo))
+    return res.json(findAngule(hour,minutes))
 })
 
 app.listen(8080, () => {
