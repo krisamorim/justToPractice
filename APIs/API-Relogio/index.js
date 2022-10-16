@@ -13,19 +13,43 @@ app.get('/', (req, res) => {
 app.get('/vinl/rest/clock/:hour', (req, res) => {
     let hour = req.params.hour
     let minutes = "0"
-    let time = hour+":"+minutes
-    return res.json({hora:hour, minute:minutes})
+    let tempo = hour+":"+minutes
+    let querieFound = queries.find((querie) => {
+        return querie.time === tempo;
+    })
+    //console.log("o time é: "+tempo)
+    //console.log(querieFound)
+    if(querieFound){
+        var angulo = querieFound['angle']
+    }else{
+        //comadno para conectar
+        //comando para achar
+        //associar o valor achar a variavel angulo
+        angulo = "buscar no DB"
+        //add a nova consulta ao arquivo json
+    }
+    return res.json(angulo)
 })
 
 //rota caso informe hora E minuto
 app.get('/vinl/rest/clock/:hour/:minutes', (req, res) => {
     let hour = req.params.hour
     let minutes = req.params.minutes
-    let time = hour+":"+minutes
-    if(!minutes){
-        minutes = 0
+    let tempo = hour+":"+minutes
+    let querieFound = queries.find((querie) => {
+        return querie.time === tempo;
+    })
+
+    if(querieFound){
+        var angulo = querieFound['angle']
+    }else{
+        //comadno para conectar
+        //comando para achar
+        //associar o valor achar a variavel angulo
+        angulo = "buscar no DB"
+        //add a nova consulta ao arquivo json
     }
-    return res.json({hora:hour, minute:minutes})
+    return res.json(angulo)
 })
 
 app.listen(8080, () => {
