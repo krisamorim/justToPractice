@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 //2- Instanciar express
 const app = express()
 
-//3- Add os complementos ao projeto
+// 3- Add os complementos ao projeto
 app.use(morgan('dev'))//morgan ao projeto para que tenhamos o log de execução
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(express.json()) //serve para informar o tipo de dados que queremos receber, que no nosso caso será um JSON
@@ -20,12 +20,24 @@ let db = [
     { '3': { Nome: 'Cliente 3', idade: '40'}}
 ]
 
-//6- 
+//6- sem caminho especifico, sendo somente a rota raiz como caminho do get
 app.get('/', (req, res) => {
     return res.json(db)
-})// sem caminho especifico, sendo somente a rota como caminho do get
+})
+
+//7- update
+app.post('/add', (req, res) => {
+    const body = req.body
+
+    if(!body)
+        return res.status(400).end()
+        
+    
+    db.push(body)
+    return res.json(body)
+})
 
 //4- startando server
 app.listen(8081, () => {
-    console.log('Express iniciado em http://localhost:8081')
+    console.log('Server startado na porta 8081')
 })
