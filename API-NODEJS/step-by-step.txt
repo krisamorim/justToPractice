@@ -6,7 +6,7 @@
 
 3- criar o arquivo index.js na raiz do projeto (mesmo local onde está o package.json)
 
-4- add alinha abixo no script no json
+4- add a linha abaixo no script no json
 Removendo essa:
  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
