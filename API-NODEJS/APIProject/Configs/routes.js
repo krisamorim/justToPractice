@@ -29,4 +29,20 @@ routes.post('/add', (req, res) => {
     return res.json(body)
 })
 
+
+//13- adicionando o delete
+routes.delete('/:id', (req, res) => {
+    const id = req.params.id
+
+    //14- Filtar a variavel DB sem o item especificado para simular a exclusão
+    let newDB = db.filter(item => {
+        if(!item[id])
+            return item
+    })
+
+    //atualizar banco
+    db = newDB;
+    return res.send(newDB)
+})
+
 module.exports = routes
