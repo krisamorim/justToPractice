@@ -2,11 +2,19 @@ const express = require('express')
 const morgan = require('morgan')
 const app = express()
 const queries = require('./src/data/queries.json')
+const clientPG = require('pg').Client
+const connectDB = new clientPG({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'anglehours',
+    password: '12345',
+    port: 5432
+})
 app.use(morgan('dev'))
 
 
 //função para encontrar o angulo
-function findAngule(h,m){
+function findAngule(hour,minute){
     let desiredTime = h + ":" + m
     let querieFound = queries.find((querie) => {
         return querie.time === desiredTime;
@@ -15,8 +23,25 @@ function findAngule(h,m){
     //verifica se a hora ja foi pesquisada
     if(querieFound){
         return querieFound['angle']
-    }else{ //se não foi pesquisada pegue no db e coloque no json
-        //comadno para conectar
+    }else{ //se não foi encontrado pegue no db e coloque no json
+        let resu = getAngle()
+        async function getAngle(){
+            try{
+            console.log('conectando ao DB postgre..')
+            await connectDB.connect()
+            console.log('Conexão bem sucedida')
+
+            let queryGetAngle = 'select angle from tabledefault where hour = ' + hour + 'AND minute = ' + minutes
+            let resultado = await (await connectDB.query(queryGetAngle)).rows
+
+            console.log(resultado)
+            }
+
+            finally{
+                await connectDB.end()
+                console.log("Desconectado")
+            }
+        
         //comando para achar no DB
         //select angle from tabledefault t where "hour" = h and "minute" = m;
             //se não achar na DB
