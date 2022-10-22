@@ -15,12 +15,16 @@ app.use(morgan('dev'))
 
 //função para encontrar o angulo
 function findAngule(h,m){
-    let desiredTime = h + ":" + m
+    //concatenando hora e minuto para utilizar na query
+    let desiredTime = `${h}:${m}`
+    
+    //busca no arquivo queries o objeto que tem o atributo time igual ao valor daa variavel desiredTime, se encontrar retorna o objeto com o angulo e o time, se não encontrar retorna false
     let querieFound = queries.find((querie) => {
+        //compara se o valor de querie.time (é o valor do time de cada objeto de dentro do arquivo queries) com o valor da variavel desireTime
         return querie.time === desiredTime;
     })
 
-    //verifica se a hora ja foi pesquisada
+    //se encontrou retorne o atributo angulo do objeto encontrado 
     if(querieFound){
         return querieFound['angle']
     }else{ //se não foi encontrado pegue no db e coloque no json
@@ -31,7 +35,9 @@ function findAngule(h,m){
             await connectDB.connect()
             console.log('Conexão bem sucedida')
 
-            let queryGetAngle = 'select angle from tabledefault where hour = ' + hour + 'AND minute = ' + minutes
+            let queryGetAngle = 'select angle from tabledefault where hour = ' + h + ' AND minute = ' + m
+            console.log(queryGetAngle)
+
             let resultado = await (await connectDB.query(queryGetAngle)).rows
 
             console.log(resultado)
@@ -62,18 +68,16 @@ app.get('/', (req, res) => {
     return res.json(queries)
 })
 
-//rota caso informe somente a hora
-app.get('/vinl/rest/clock/:hour', (req, res) => {
-    let hour = req.params.hour
-    let minutes = "0"
-
-    return res.json(findAngule(hour, minutes))
-})
-
-//rota caso informe hora E minuto
-app.get('/vinl/rest/clock/:hour/:minutes', (req, res) => {
+//rota p pegar hora e minuto
+app.get('/clock/:hour/:minutes?', (req, res) => {
     let hour = req.params.hour
     let minutes = req.params.minutes
+
+    //if para definir minutes como 0 caso não seja informado
+    if(minutes === undefined){
+        minutes = 0
+    }
+    //passa a hora e minuto para a função findAngule
     return res.json(findAngule(hour,minutes))
 })
 
