@@ -1,7 +1,7 @@
-const express = require('express')
-const morgan = require('morgan')
-const app = express()
-const queries = require('./src/data/queries.json')
+const express = require('express');
+const router = express.Router();
+const queries = require('../src/data/queries.json')
+
 const clientPG = require('pg').Client
 const connectDB = new clientPG({
     user: 'postgres',
@@ -10,8 +10,6 @@ const connectDB = new clientPG({
     password: '12345',
     port: 5432
 })
-app.use(morgan('dev'))
-
 
 //função para encontrar o angulo
 function findAngule(h,m){
@@ -28,48 +26,39 @@ function findAngule(h,m){
     if(querieFound){
         return querieFound['angle']
     }else{ //se não foi encontrado pegue no db e coloque no json
-        let resu = getAngle()
         async function getAngle(){
             try{
-            console.log('conectando ao DB postgre..')
-            await connectDB.connect()
-            console.log('Conexão bem sucedida')
+                console.log('conectando ao DB postgre..')
+                await connectDB.connect()
+                console.log('Conexão bem sucedida')
+                //montando query
+                let queryGetAngle = 'select angle from tabledefault where hour = ' + h + ' AND minute = ' + m
 
-            let queryGetAngle = 'select angle from tabledefault where hour = ' + h + ' AND minute = ' + m
-            console.log(queryGetAngle)
-
-            let resultado = await (await connectDB.query(queryGetAngle)).rows
-
-            console.log(resultado)
+                //consultar no banco
+                return await (await connectDB.query(queryGetAngle)).rows
             }
 
             finally{
                 await connectDB.end()
                 console.log("Desconectado")
             }
-        
-        //comando para achar no DB
-        //select angle from tabledefault t where "hour" = h and "minute" = m;
-            //se não achar na DB
-                //então calcular
-                //add a base de dados
-                //add ao arquivo queri
-            //se achar ele faz o select e pega o angulo 
-                //add ao arquivo querri
-        //associar o valor achar a variavel angulo p/ mostra no navegador
-        return "buscar no DB"
-        //add a nova consulta ao arquivo json
+
+            return resultado
         }
+
+        let resu = getAngle()
+
+        console.log(resu)
+        if(resu == 0){
+            console.log('calcular')
+            console.log('add ao db')
+        }
+
     }
 }
 
-//rota defaul para ler o json
-app.get('/', (req, res) => {
-    return res.json(queries)
-})
-
 //rota p pegar hora e minuto
-app.get('/clock/:hour/:minutes?', (req, res) => {
+router.get('/:hour/:minutes?', (req, res) => {
     let hour = req.params.hour
     let minutes = req.params.minutes
 
@@ -79,8 +68,7 @@ app.get('/clock/:hour/:minutes?', (req, res) => {
     }
     //passa a hora e minuto para a função findAngule
     return res.json(findAngule(hour,minutes))
+    //res.status(200).send(`hour: ${hour} and minute ${minutes}`)
 })
 
-app.listen(8080, () => {
-    console.log('Server iniciado na porta 8080')
-})
+module.exports = router;
