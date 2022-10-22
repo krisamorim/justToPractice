@@ -14,7 +14,7 @@ app.use(morgan('dev'))
 
 
 //função para encontrar o angulo
-function findAngule(hour,minute){
+function findAngule(h,m){
     let desiredTime = h + ":" + m
     let querieFound = queries.find((querie) => {
         return querie.time === desiredTime;
@@ -53,6 +53,7 @@ function findAngule(hour,minute){
         //associar o valor achar a variavel angulo p/ mostra no navegador
         return "buscar no DB"
         //add a nova consulta ao arquivo json
+        }
     }
 }
 
