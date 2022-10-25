@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const queries = require('../src/data/queries.json');
 
 //rota default para ler o json
 router.get('/', (req, res,) => {

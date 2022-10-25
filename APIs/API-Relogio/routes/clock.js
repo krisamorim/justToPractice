@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const queries = require('../src/data/queries.json')
-
+const queries = require('../src/data/queries.json');
 const clientPG = require('pg').Client
 const connectDB = new clientPG({
     user: 'postgres',
