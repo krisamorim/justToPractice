@@ -10,8 +10,8 @@ terraform {
 #Configure the AWS Provider
 provider "aws" {
     region = "us-east-1"
-    shared_credentials_file = "/home/krissfurtado/.aws/credentials"
-    profile = "default"
+    shared_credentials_file = "./fileNameCredentials"
+    profile = "profileName"
 }
 
 resource "aws_instance" "web" {

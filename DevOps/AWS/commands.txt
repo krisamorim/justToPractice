@@ -1,0 +1,8 @@
+#to view bucket s3
+aws s3 ls
+
+#To view EC2 instances
+aws ec2 describe-instances
+
+
+#

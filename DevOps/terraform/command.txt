@@ -1,0 +1,5 @@
+#Verificar arquivo tf
+terraform plan
+
+#Configurar CLi AWS
+aws configure
