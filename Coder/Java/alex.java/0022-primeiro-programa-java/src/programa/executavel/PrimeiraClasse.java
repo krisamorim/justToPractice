@@ -15,5 +15,10 @@ public class PrimeiraClasse {
 		Aluno aluno3 = new Aluno("Maria");//utilizando o contrutor nomePadrao
 		
 		Aluno aluno4 = new Aluno("Pedro", 30);//utilizando o construtor nomePadrao e idadePadrao
+		
+		Aluno aluno5 = new Aluno();
+		aluno5.nome = "Ana";
+		
+		System.out.println(aluno5.nome);
 	}
 }

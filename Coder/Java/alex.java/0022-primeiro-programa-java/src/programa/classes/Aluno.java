@@ -3,7 +3,7 @@ package programa.classes;
 /*Clase/Objeto que representa aluno*/
 public class Aluno {
 	//Atributos:
-	String nome;
+	public String nome;//colocando public pois dessa vez esta em pacotes diferentes
 	int idade;
 	String dataNascimento;
 	String registroGeral;
@@ -13,6 +13,11 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	
+	//criando o construtor aluno sem parâmetro para poder instanciar o objeto sem colocar valor e depois poder definir os valores direto pelo atributo
+	public Aluno() {
+	
+	}
 	
 	public Aluno(String nomePadrao) {
 		nome = nomePadrao;
