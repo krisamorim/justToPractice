@@ -24,5 +24,10 @@ public class PrimeiraClasse {
 		aluno5.nome = "kris";
 		aluno5.idade = 38;
 		System.out.println("O nome do aluno5 é " + aluno5.nome + "\nA idade do aluno5 é " + aluno5.idade);
+		
+		//usando metodo set e get
+		Aluno aluno7 = new Aluno();
+		aluno7.setNome("Lucia");
+		System.out.println("O nome do aluno 7 é " + aluno7.getNome());
 	}
 }
