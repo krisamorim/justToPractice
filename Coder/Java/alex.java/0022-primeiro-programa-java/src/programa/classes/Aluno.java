@@ -4,7 +4,7 @@ package programa.classes;
 public class Aluno {
 	//Atributos:
 	public String nome;//colocando public pois dessa vez esta em pacotes diferentes
-	int idade;
+	public int idade;
 	String dataNascimento;
 	String registroGeral;
 	String numeroCpf;

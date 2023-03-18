@@ -18,7 +18,11 @@ public class PrimeiraClasse {
 		
 		Aluno aluno5 = new Aluno();
 		aluno5.nome = "Ana";
-		
 		System.out.println(aluno5.nome);
+		
+		Aluno aluno6 = new Aluno();
+		aluno5.nome = "kris";
+		aluno5.idade = 38;
+		System.out.println("O nome do aluno5 é " + aluno5.nome + "\nA idade do aluno5 é " + aluno5.idade);
 	}
 }
