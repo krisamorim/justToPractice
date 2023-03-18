@@ -27,4 +27,13 @@ public class Aluno {
 		nome = nomePadrao;
 		idade = idadePadrao;		
 	}
+	
+	//criando metodo set & get
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
 }
