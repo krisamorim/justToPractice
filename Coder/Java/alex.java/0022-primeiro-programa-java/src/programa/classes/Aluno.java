@@ -13,4 +13,9 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	
+	public Aluno(String nomePadrao) {
+		nome = nomePadrao;
+	}
+	
 }
