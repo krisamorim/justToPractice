@@ -13,5 +13,7 @@ public class PrimeiraClasse {
 		Aluno aluno2 = new Aluno();/*Aqui será o Pedro*/
 		
 		Aluno aluno3 = new Aluno("Maria");//utilizando o contrutor nomePadrao
+		
+		Aluno aluno4 = new Aluno("Pedro", 30);//utilizando o construtor nomePadrao e idadePadrao
 	}
 }

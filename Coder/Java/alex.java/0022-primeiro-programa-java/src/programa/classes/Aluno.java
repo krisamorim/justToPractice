@@ -18,4 +18,8 @@ public class Aluno {
 		nome = nomePadrao;
 	}
 	
+	public Aluno(String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;		
+	}
 }
